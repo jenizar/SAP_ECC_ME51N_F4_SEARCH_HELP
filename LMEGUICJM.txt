@@ -1,0 +1,10 @@
+** Display Search Help AFNAM / BEDNR in Item PR
+  LOOP AT gt_fieldcatalog INTO ls_fcat WHERE fieldname EQ 'AFNAM'.
+    MOVE 'MEREQ3328' TO ls_fcat-REF_TABLE.
+    MODIFY gt_fieldcatalog FROM ls_fcat.
+  ENDLOOP.
+  LOOP AT gt_fieldcatalog INTO ls_fcat WHERE fieldname EQ 'BEDNR'.
+    MOVE 'MEREQ3328' TO ls_fcat-REF_TABLE.
+    MODIFY gt_fieldcatalog FROM ls_fcat.
+  ENDLOOP.
+
